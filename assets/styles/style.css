@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Тёмный фон */
+  color: #ffffff; /* Белый текст */
+  margin: 0;
+  padding: 0;
+}
+
+.user-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px;
+}
+
+#search {
+  width: 100%; /* Занимает всю ширину на мобильных */
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+#search::placeholder {
+  color: #888;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.card {
+  background: #1e1e1e;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%; /* Занимает всю ширину */
+  max-width: 400px; /* Ограничиваем ширину */
+}
+
+.card img {
+  width: 100px; /* Уменьшаем размер аватарки */
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #444;
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 20px; /* Чуть меньше заголовок */
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.repo {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 14px; /* Уменьшенный шрифт */
+}
+
+.repo:hover {
+  background: #005bb5;
+}
+
+.card h1 {
+  color: #ff5555;
+  font-size: 18px;
+}
+
+.repos {
+  width: 400px;
+  padding: 10px 20px;
+  background: #1e1e1e;
+  border-radius: 5px;
+}
+
+/* --- Адаптивность для мобильных устройств --- */
+@media (max-width: 768px) {
+  #search {
+    font-size: 14px; /* Уменьшаем текст в поле ввода */
+    padding: 8px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card img {
+    width: 80px; /* Еще меньше аватарка */
+    height: 80px;
+  }
+
+  .card h2 {
+    font-size: 18px; /* Еще меньше заголовок */
+  }
+
+  .repo {
+    font-size: 12px; /* Уменьшаем шрифт ссылок */
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-form {
+    margin: 10px 5px;
+  }
+
+  #search {
+    font-size: 12px; /* Минимальный размер текста */
+    padding: 15px 10px;
+    width: 260px;
+  }
+
+  .card {
+    padding: 10px;
+    width: 380px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .repo {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .repos {
+    width: 360px;
+    padding: 10px 20px;
+    background: #1e1e1e;
+    border-radius: 5px;
+  }
+
+}
